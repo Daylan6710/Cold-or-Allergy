@@ -36,7 +36,8 @@ no known issues
 <script>
         var allergy_count = 0;
         var cold_count = 0;
-
+		var allergy_percent = 0;
+		var cold_percent = 0;
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
@@ -49,8 +50,10 @@ no known issues
         }
 
 		function changetext(){
+			var allergy_percent = allergy_count/(allergy_count + cold_count)*100;
+			var cold_percent = cold_count/(allergy_count + cold_count)*100;
 			var initialText = document.getElementById("results");<!--i dont even know what i did but it was this-->
-			initialText.innerHTML = "Probability it is allergies = " + allergy_count + "% <br> Probability it is a cold = " + cold_count + "%"
+			initialText.innerHTML = "Probability it is allergies = " + allergy_percent + "% <br> Probability it is a cold = " + cold_percent + "%"<!--added percent-->
 		} 
 
   </script>
