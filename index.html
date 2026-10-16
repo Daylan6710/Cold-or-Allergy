@@ -48,6 +48,11 @@ no known issues
 			alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count);<!--added the score or tally system i think-->
         }
 
+		function changetext(){
+			var initialText = document.getElementById("results");<!--i dont even know what i did but it was this-->
+			initialText.innerHTML = "Probability it is allergies = " + allergy_count + "% <br> Probability it is a cold = " + cold_count + "%"
+		} 
+
   </script>
 
 
@@ -166,7 +171,7 @@ no known issues
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Press on the button below to see your Results</p>
+		<p id="Results">Press on the button below to see your Results</p><!-- added resulkts thing at the begining-->
         <a class="w3-btn w3-grey w3-round"> Clich Here for Results! </a>
 	</div>
 </div>	
